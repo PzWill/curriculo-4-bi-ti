@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Carrega o Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carrega a biblioteca de ícones Lucide -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
+    <style>
+        /* Fonte personalizada */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">Meu Portfólio</a>
+            
+            <!-- Links do Desktop -->
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
+                <a href="#sobre" class="text-gray-600 hover:text-indigo-600 transition duration-300">Sobre</a>
+                <a href="#projetos" class="text-gray-600 hover:text-indigo-600 transition duration-300">Projetos</a>
+                <a href="curriculo.html" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-300">
+                    Meu Currículo
+                </a>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 transition duration-300">Home</a>
+            <a href="#sobre" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 transition duration-300">Sobre</a>
+            <a href="#projetos" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 transition duration-300">Projetos</a>
+            <a href="curriculo.html" class="block px-6 py-3 bg-indigo-600 text-white text-center rounded-b-md hover:bg-indigo-700 transition duration-300">
+                Meu Currículo
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- Seção Home -->
+        <section id="home" class="min-h-[calc(100vh-80px)] flex items-center">
+            <div class="text-center md:text-left w-full">
+                <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">Olá, eu sou William </h1>
+                <p class="mt-4 text-xl md:text-2xl text-gray-700">Estudante de T.I.</p>
+                <p class="mt-6 max-w-2xl mx-auto md:mx-0 text-gray-600">
+                    Bem-vindo ao meu portfólio digital. Aqui você encontrará informações sobre mim e alguns dos projetos que desenvolvi ao longo da minha jornada acadêmica e profissional.
+                </p>
+                <a href="#projetos" class="mt-8 inline-block bg-indigo-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-indigo-700 transition duration-300">
+                    Ver Projetos
+                </a>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="py-20">
+            <h2 class="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="imagens/fotominha.jpg" alt="Sua Foto" class="rounded-full shadow-lg mx-auto">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-lg text-gray-700 mb-4">
+                        Sou um estudante dedicado e entusiasta da área de T.I., 
+                        atualmente cursando o Ensino Médio Técnico no Senac. Minha 
+                        paixão pela tecnologia vai além da sala de aula, com um interesse especial em 
+                        Inteligência Artificial e como ela pode ser usada para criar soluções inovadoras. 
+                        Meu principal objetivo de carreira é crescer profissionalmente neste campo, e estou 
+                        ativamente à procura da minha primeira oportunidade no mercado de trabalho. 
+                        Encaro esta busca como o próximo passo essencial para desenvolver minhas 
+                        habilidades e aplicar na prática o conhecimento que venho adquirindo.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Embora esteja em busca da minha primeira experiência profissional formal,
+                        trago uma base sólida de habilidades técnicas e uma forte proatividade.
+                        Possuo conhecimento intermediário em linguagens como Python e HTML,
+                        e habilidades práticas em montagem de hardware.
+                        Meu diferencial é o foco em IA,com conhecimento avançado em sua utilização e automatização,
+                        complementado por cursos específicos como o AI-900 (IA no Azure) e Fundamentos de Python pela Cisco.
+                        Além disso, minha participação em olimpíadas de Matemática e Estatística demonstra minha capacidade analítica,
+                        e sou reconhecido por ser dedicado, cumprir prazos e ter o inglês em nível avançado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Projetos -->
+        <section id="projetos" class="py-20 bg-white rounded-lg shadow-lg -mx-6 px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Projetos por Área do Conhecimento</h2>
+            
+            <!-- Grid de Projetos -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card Projeto 1: Linguagens -->
+                <a href="linguagens.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x400/6366F1/FFF?text=Linguagens" alt="Projeto de Linguagens" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-indigo-600 mb-2">Linguagens</h3>
+                        <p class="text-gray-600"><b>Revista Digital:</b> Pensando Good Projeto editorial completo que une design e redação. Uma abordagem visual sobre o combate ao racismo, o impacto da IA na educação e a estética da Arte Medieval.</p>
+                    </div>
+                </a>
+
+                <!-- Card Projeto 2: Ciências da Natureza -->
+                <a href="ciencias_natureza.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x400/10B981/FFF?text=C.+Natureza" alt="Projeto de Ciências da Natureza" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-emerald-600 mb-2">Ciências da Natureza</h3>
+                        <p class="text-gray-600">[Breve descrição do projeto ou da área. Ex: Simulação de física, relatório de biologia, etc.]</p>
+                    </div>
+                </a>
+
+                <!-- Card Projeto 3: Ciências Humanas -->
+                <a href="ciencias_humanas.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x400/F59E0B/FFF?text=C.+Humanas" alt="Projeto de Ciências Humanas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-amber-600 mb-2">Ciências Humanas</h3>
+                        <p class="text-gray-600"><b>Simulação ONU:</b> Direitos Humanos Representação oficial da Turquia no debate sobre ajuda humanitária em Gaza. Análise geopolítica, oratória e construção de consensos internacionais.</p>
+                    </div>
+                </a>
+
+                <!-- Card Projeto 4: Matemática -->
+                <a href="matematica.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x400/EF4444/FFF?text=Matemática" alt="Projeto de Matemática" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-red-600 mb-2">Matemática</h3>
+                        <p class="text-gray-600"><b>Matemática e Tecnologia Pesquisa estatística de campo:</b> levantamento e análise de dados sobre a frequência e finalidade do uso de ferramentas de IA no ensino médio.</p>
+                    </div>
+                </a>
+
+                <!-- Card Projeto 5: FTP (T.I.) -->
+                <a href="ti.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <img src="https://placehold.co/600x400/3B82F6/FFF?text=T.I." alt="Projeto de T.I." class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-2">Formação Téc. (T.I.)</h3>
+                        <p class="text-gray-600"><b>Projeto Fullstack:</b> Teach AI Desenvolvimento de uma aplicação de IA Generativa utilizando Python, Flask, Tailwind CSS e FAISS. Do wireframe ao MVP funcional.</p>
+                    </div>
+                </a>
+                
+                
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 [Seu Nome]. Todos os direitos reservados.</p>
+            <p class="mt-2">Feito com HTML, Tailwind CSS e JavaScript.</p>
+        </div>
+    </footer>
+
+    <!-- Script para Menu Mobile e Smooth Scroll -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Toggle do menu mobile
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Fecha o menu mobile ao clicar em um link
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Smooth scroll para links do desktop
+            document.querySelectorAll('header .hidden a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

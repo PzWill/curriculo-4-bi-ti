@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Parra Zelent - Currículo</title>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!--  INÍCIO DO CSS INTERNO-->
+    <style>
+        :root {
+            --cor-primaria: #007bff;
+            --cor-texto: #333;
+            --cor-fundo: #f4f7f6;
+            --cor-cartao: #ffffff;
+            --cor-borda: #dee2e6;
+            --sombra-cartao: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 40px;
+            background-color: var(--cor-cartao);
+            border-radius: 8px;
+            box-shadow: var(--sombra-cartao);
+        }
+
+        /* --- Cabeçalho e Informações Pessoais --- */
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--cor-borda);
+            position: relative; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--cor-texto);
+        }
+
+        header .subtitulo {
+            font-size: 1.2rem;
+            color: var(--cor-primaria);
+            font-weight: 500;
+            margin: 5px 0 15px 0;
+        }
+
+        .info-contato {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; 
+            font-size: 0.9rem;
+            color: #555;
+        }
+        
+        .info-contato a {
+            color: #555;
+            text-decoration: none;
+        }
+        
+        .info-contato a:hover {
+            color: var(--cor-primaria);
+            text-decoration: underline;
+        }
+
+         /* --- Botão de Imprimir --- */
+        .print-button {
+            /* position: relative; REMOVIDO */
+            /* top: 0; REMOVIDO */
+            /* right: 0; REMOVIDO */
+            background-color: var(--cor-primaria);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao-voltar {
+            /* position: relative; REMOVIDO */
+            /* top: 0; REMOVIDO */
+            /* right: 0; REMOVIDO */
+            background-color: var(--cor-primaria);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Garante que o link não seja sublinhado */
+            display: inline-flex; /* Para alinhar o ícone */
+            align-items: center; /* Para alinhar o ícone */
+        }
+
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* --- Seções --- */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
+            border-bottom: 2px solid var(--cor-primaria);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .section p {
+            margin-top: 0;
+        }
+
+        /* --- Cartões (Experiência / Formação) --- */
+        .card {
+            background-color: #fdfdfd;
+            border: 1px solid var(--cor-borda);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .card h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.25rem;
+        }
+
+        .card-subtitulo {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+
+        /* --- Habilidades --- */
+        .habilidades-container {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 15px;
+            padding-left: 20px; 
+        }
+        
+        .habilidades-container ul {
+            margin: 0;
+            padding-left: 20px; 
+        }
+        
+        .habilidades-container li {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .skill-pill {
+            background-color: #e9ecef;
+            color: #333;
+            padding: 6px 14px;
+            border-radius: 16px; 
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .botoes-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px; /* Espaço antes do header */
+        }
+        
+        /* --- Estilos de Impressão --- */
+        @media print {
+            body {
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            
+            /* Esconde o botão de imprimir e o toast */
+            .print-button,
+            .toast,
+            .botao-voltar, 
+            .botoes-container {
+                display: none;
+            }
+            
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid; 
+            }
+            
+            .section h2 {
+                color: #333;
+                border-bottom: 2px solid #333;
+            }
+        }
+        
+        /* --- Responsividade Simples --- */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .botoes-container {
+                flex-direction: column; /* Empilha os botões */
+                gap: 10px; /* Adiciona espaço entre eles */
+                width: 100%;
+                }
+
+            .print-button,
+            .botao-voltar {
+                width: 10%; /* Faz os botões ocuparem a largura total */
+                text-align: center; /* Centraliza o texto do link/botão */
+                justify-content: center; /* Centraliza ícone + texto no botão de voltar */
+                }
+
+            .print-button {
+                position: absolute; 
+                margin-top: 15px;
+                width: 100%;
+            }
+
+            .botao-voltar {
+                position: absolute; 
+                margin-top: 15px;
+                width: 100%;
+            }
+            
+            .info-contato {
+                flex-direction: column; 
+                gap: 5px;
+                align-items: center;
+            }
+        }
+
+        /* --- Container para pílulas de atividades --- */
+        .atividades-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+       
+
+    </style>
+    <!-- FIM DO CSS INTERNO -->
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- NOVO container para os botões -->
+        <div class="botoes-container">
+            <!-- Botão Voltar MOVIDO para cá -->
+            <a href="index.html" class="botao-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left mr-2" 
+                style="margin-right: 8px;"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Voltar ao Portfólio
+            </a>
+            <!-- Botão Imprimir MOVIDO para cá -->
+            <button class="print-button" id="btnPrint">Imprimir / Salvar PDF</button>
+        </div>
+        
+        <!-- Botão de Imprimir / Salvar PDF foi REMOVIDO daqui -->
+        
+        <header>
+            <h1>William Parra Zelent</h1>
+            <p class="subtitulo">Técnico em Informática (Cursando)</p>
+            <div class="info-contato">
+                <span><a href="mailto:Williamparrazelent@gmail.com">Williamparrazelent@gmail.com</a></span>
+                <span>(11) 99963-8239</span>
+            
+            </div>
+        </header>
+
+        <main>
+            <!-- Seção Objetivo Profissional -->
+            <section class="section">
+                <h2>Objetivo Profissional</h2>
+                <p>
+                    Busco uma oportunidade para obter minhas primeiras experiências profissionais no
+                    mercado de trabalho, com foco em desenvolver meus conhecimentos e habilidade.
+                </p>
+            </section>
+            
+            <!-- Seção Resumo Profissional -->
+            <section class="section">
+                <h2>Resumo Profissional</h2>
+                <p>
+                    Estudante dedicado, cursando ensino médio técnico na área de T.I (Técnico em
+                    Informática) no Senac. Possuo um grande interesse em aprender mais e adquirir mais
+                    conhecimento na área, com conhecimentos em técnico de hardware, programação e
+                    vontade de crescer profissionalmente e de trabalhar com inteligência artificial.
+                </p>
+            </section>
+
+            <!-- Seção Experiência Profissional -->
+            <section class="section">
+                <h2>Experiência</h2>
+                <p>Em busca de minha primeira experiência profissional</p>
+            </section>
+
+            <!-- Seção Educação -->
+            <section class="section">
+                <h2>Educação</h2>
+                
+                <div class="card">
+                    <h3>Ensino Médio Técnico em T.I (Técnico em Informática) - Senac</h3>
+                    <p class="card-subtitulo">Previsão de conclusão: Dezembro / 2025</p>
+                    
+                </div>
+            </section>
+            
+            <!-- Seção Atividades Extracurriculares -->
+            <section class="section">
+                <h2>Atividades Extracurriculares</h2>
+               
+                <div class="atividades-container">
+                    <span class="skill-pill">Olimpíada Canguru de Matemática</span>
+                    <span class="skill-pill">Olimpíada Brasileira de Estatística</span>
+                    <span class="skill-pill">Participação na OBMEP</span>
+                    <span class="skill-pill">Curso: Fundamentos do Python 1 (Cisco)</span>
+                    <span class="skill-pill">Curso: AI-900 IA no AZURE (Bradesco)</span>
+                    <span class="skill-pill">Curso: Gerenciamento de Ameaças (Cisco)</span>
+                </div>
+            </section>
+            
+            <!-- Seção Habilidades -->
+            <section class="section">
+                <h2>Habilidades</h2>
+                
+                <div class="habilidades-container">
+                    <!-- Coluna 1 -->
+                    <div>
+                        <ul>
+                            <li>Conhecimento intermediário em Excel, Power Point, HTML e Python</li>
+                            <li>Conhecimento básico em Java e JavaScript</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 2 -->
+                    <div>
+                        <ul>
+                            <li>Habilidade em montagem de hardware</li>
+                            <li>Conhecimento avançado em utilização de IA e automatização</li>
+                            <li>Conhecimento básico/intermediário em programação de inteligências artificias</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 3 -->
+                    <div>
+                        <ul>
+                            <li>Inglês avançado</li>
+                            <li>Espanhol básico</li>
+                            <li>Capacidades de cumprir prazos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!--  INÍCIO DO JAVASCRIPT INTERNO-->
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const botaoImprimir = document.getElementById('btnPrint');
+            
+            botaoImprimir.addEventListener('click', function() {
+                window.print();
+            });
+            
+        });
+
+        
+    </script>
+    <!-- FIM DO JAVASCRIPT INTERNO -->
+
+</body>
+</html>
+
+
+
