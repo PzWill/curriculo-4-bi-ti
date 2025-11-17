@@ -9,10 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <!--  INÍCIO DO CSS INTERNO-->
+    <!--  Aqui começa o CSS (estilo) da página -->
     <style>
+        /* :root é onde a gente guarda as cores pra usar depois */
         :root {
-            --cor-primaria: #007bff;
+            --cor-primaria: #007bff; /* um azul legal */
             --cor-texto: #333;
             --cor-fundo: #f4f7f6;
             --cor-cartao: #ffffff;
@@ -21,24 +22,25 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--cor-fundo);
+            font-family: 'Inter', sans-serif; /* A mesma fonte do outro site */
+            background-color: var(--cor-fundo); /* Usando a cor que guardei */
             color: var(--cor-texto);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
+        /* O "container" é a caixa branca principal no meio */
         .container {
             max-width: 900px;
-            margin: 30px auto;
+            margin: 30px auto; /* auto nas laterais pra centralizar */
             padding: 40px;
             background-color: var(--cor-cartao);
             border-radius: 8px;
             box-shadow: var(--sombra-cartao);
         }
 
-        /* --- Cabeçalho e Informações Pessoais --- */
+        /* --- Estilo do Cabeçalho (Nome, etc) --- */
         header {
             text-align: center;
             padding-bottom: 20px;
@@ -79,11 +81,9 @@
             text-decoration: underline;
         }
 
-         /* --- Botão de Imprimir --- */
+         /* --- Estilo do Botão de Imprimir --- */
         .print-button {
-            /* position: relative; REMOVIDO */
-            /* top: 0; REMOVIDO */
-            /* right: 0; REMOVIDO */
+            /* Tinha umas coisas de position aqui mas tirei, agora tá flex */
             background-color: var(--cor-primaria);
             color: white;
             border: none;
@@ -96,9 +96,7 @@
         }
 
         .botao-voltar {
-            /* position: relative; REMOVIDO */
-            /* top: 0; REMOVIDO */
-            /* right: 0; REMOVIDO */
+            /* Mesma coisa, tirei o position */
             background-color: var(--cor-primaria);
             color: white;
             border: none;
@@ -108,16 +106,16 @@
             font-weight: 500;
             font-family: 'Inter', sans-serif;
             transition: background-color 0.3s ease;
-            text-decoration: none; /* Garante que o link não seja sublinhado */
-            display: inline-flex; /* Para alinhar o ícone */
-            align-items: center; /* Para alinhar o ícone */
+            text-decoration: none; /* Pra não ficar sublinhado */
+            display: inline-flex; /* Pra alinhar o ícone da seta */
+            align-items: center; /* Centraliza o ícone */
         }
 
         .print-button:hover {
             background-color: #0056b3;
         }
 
-        /* --- Seções --- */
+        /* --- Estilo das Seções (Objetivo, Educação...) --- */
         .section {
             margin-bottom: 30px;
         }
@@ -134,7 +132,7 @@
             margin-top: 0;
         }
 
-        /* --- Cartões (Experiência / Formação) --- */
+        /* --- Os cards de "Educação" --- */
         .card {
             background-color: #fdfdfd;
             border: 1px solid var(--cor-borda);
@@ -157,10 +155,10 @@
         }
 
 
-        /* --- Habilidades --- */
+        /* --- Parte das Habilidades --- */
         .habilidades-container {
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Isso faz as colunas se ajustarem sozinhas */
             gap: 15px;
             padding-left: 20px; 
         }
@@ -175,6 +173,7 @@
             margin-bottom: 5px;
         }
 
+        /* Aqueles balõezinhos das atividades */
         .skill-pill {
             background-color: #e9ecef;
             color: #333;
@@ -184,17 +183,18 @@
             font-weight: 500;
         }
 
+        /* O container que segura os botões de voltar/imprimir */
         .botoes-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Um pra cada lado */
             align-items: center;
             margin-bottom: 5px; /* Espaço antes do header */
         }
         
-        /* --- Estilos de Impressão --- */
+        /* --- botão de imprimir --- */
         @media print {
             body {
-                background-color: #ffffff;
+                background-color: #ffffff; /* Fundo branco no papel */
                 margin: 0;
                 padding: 0;
             }
@@ -207,7 +207,7 @@
                 border-radius: 0;
             }
             
-            /* Esconde o botão de imprimir e o toast */
+            /* Esconde os botões pra não sair no PDF */
             .print-button,
             .toast,
             .botao-voltar, 
@@ -228,7 +228,7 @@
             }
         }
         
-        /* --- Responsividade Simples --- */
+        /* --- Deixa o site Responsivo --- */
         @media (max-width: 768px) {
             .container {
                 margin: 10px;
@@ -240,7 +240,7 @@
             }
 
             .botoes-container {
-                flex-direction: column; /* Empilha os botões */
+                flex-direction: column; /* Um botão embaixo do outro no celular */
                 gap: 10px; /* Adiciona espaço entre eles */
                 width: 100%;
                 }
@@ -252,6 +252,7 @@
                 justify-content: center; /* Centraliza ícone + texto no botão de voltar */
                 }
 
+            /* Tive que usar position absolute aqui pra funcionar direito no celular */
             .print-button {
                 position: absolute; 
                 margin-top: 15px;
@@ -271,7 +272,7 @@
             }
         }
 
-        /* --- Container para pílulas de atividades --- */
+        /* O container dos balõezinhos de atividades */
         .atividades-container {
             display: flex;
             flex-wrap: wrap;
@@ -281,26 +282,23 @@
        
 
     </style>
-    <!-- FIM DO CSS INTERNO -->
+    <!-- FIM DO CSS -->
 </head>
 <body>
 
     <div class="container">
-        
-        <!-- NOVO container para os botões -->
+       
         <div class="botoes-container">
-            <!-- Botão Voltar MOVIDO para cá -->
+            <!-- Botão de Voltar -->
             <a href="index.html" class="botao-voltar">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left mr-2" 
                 style="margin-right: 8px;"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
                 Voltar ao Portfólio
             </a>
-            <!-- Botão Imprimir MOVIDO para cá -->
+            <!-- Botão de Imprimir -->
             <button class="print-button" id="btnPrint">Imprimir / Salvar PDF</button>
         </div>
-        
-        <!-- Botão de Imprimir / Salvar PDF foi REMOVIDO daqui -->
         
         <header>
             <h1>William Parra Zelent</h1>
@@ -313,7 +311,7 @@
         </header>
 
         <main>
-            <!-- Seção Objetivo Profissional -->
+            <!-- Seção Objetivo -->
             <section class="section">
                 <h2>Objetivo Profissional</h2>
                 <p>
@@ -322,7 +320,7 @@
                 </p>
             </section>
             
-            <!-- Seção Resumo Profissional -->
+            <!-- Seção Resumo -->
             <section class="section">
                 <h2>Resumo Profissional</h2>
                 <p>
@@ -333,7 +331,7 @@
                 </p>
             </section>
 
-            <!-- Seção Experiência Profissional -->
+            <!-- Seção Experiência -->
             <section class="section">
                 <h2>Experiência</h2>
                 <p>Em busca de minha primeira experiência profissional</p>
@@ -350,7 +348,7 @@
                 </div>
             </section>
             
-            <!-- Seção Atividades Extracurriculares -->
+            <!-- Seção Atividades -->
             <section class="section">
                 <h2>Atividades Extracurriculares</h2>
                
@@ -369,7 +367,7 @@
                 <h2>Habilidades</h2>
                 
                 <div class="habilidades-container">
-                    <!-- Coluna 1 -->
+                    <!-- Coluna 1 de habilidades -->
                     <div>
                         <ul>
                             <li>Conhecimento intermediário em Excel, Power Point, HTML e Python</li>
@@ -377,7 +375,7 @@
                         </ul>
                     </div>
                     
-                    <!-- Coluna 2 -->
+                    <!-- Coluna 2 de habilidades -->
                     <div>
                         <ul>
                             <li>Habilidade em montagem de hardware</li>
@@ -386,7 +384,7 @@
                         </ul>
                     </div>
                     
-                    <!-- Coluna 3 -->
+                    <!-- Coluna 3 de habilidades -->
                     <div>
                         <ul>
                             <li>Inglês avançado</li>
@@ -400,25 +398,25 @@
         </main>
     </div>
 
-    <!--  INÍCIO DO JAVASCRIPT INTERNO-->
+    <!--  INÍCIO DO JAVASCRIPT -->
     <script>
         
+        // Espera a página carregar pra rodar o JS
         document.addEventListener('DOMContentLoaded', function() {
             
+            // Pega o botão de imprimir pelo ID dele
             const botaoImprimir = document.getElementById('btnPrint');
             
+            // O que fazer quando clicar no botão
             botaoImprimir.addEventListener('click', function() {
-                window.print();
+                window.print(); // Chama a janela de impressão do navegador
             });
             
         });
 
         
     </script>
-    <!-- FIM DO JAVASCRIPT INTERNO -->
+    <!-- FIM DO JAVASCRIPT -->
 
 </body>
 </html>
-
-
-
