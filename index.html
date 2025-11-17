@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
-    <!-- Carrega o Tailwind CSS -->
+    <!-- Importando o Tailwind pra deixar bonito -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carrega a biblioteca de ícones Lucide -->
+    <!-- Isso é para os ícones (tipo o menu hamburguer) -->
     <script src="https://unpkg.com/lucide-react@latest/dist/lucide-react.js"></script>
     <style>
-        /* Fonte personalizada */
+        /* Importando a fonte Inter do Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif; /* Usando a fonte Inter no site todo */
         }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <!-- Cabeçalho e Navegação -->
+    <!-- Aqui começa o cabeçalho, aquela barra de cima -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-indigo-600">Meu Portfólio</a>
             
-            <!-- Links do Desktop -->
+            <!-- Links que aparecem no PC (desktop) -->
             <div class="hidden md:flex space-x-6 items-center">
                 <a href="#home" class="text-gray-600 hover:text-indigo-600 transition duration-300">Home</a>
                 <a href="#sobre" class="text-gray-600 hover:text-indigo-600 transition duration-300">Sobre</a>
@@ -33,7 +33,7 @@
                 </a>
             </div>
 
-            <!-- Botão do Menu Mobile -->
+            <!-- Botão de menu pra celular -->
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-600 hover:text-indigo-600 focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -41,7 +41,7 @@
             </div>
         </nav>
 
-        <!-- Menu Mobile (oculto por padrão) -->
+        <!-- O menu que abre no celular (começa escondido) -->
         <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
             <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 transition duration-300">Home</a>
             <a href="#sobre" class="block px-6 py-3 text-gray-600 hover:bg-indigo-50 transition duration-300">Sobre</a>
@@ -52,10 +52,10 @@
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
+    <!-- O conteúdo principal da página -->
     <main class="container mx-auto px-6 py-12">
 
-        <!-- Seção Home -->
+        <!-- Seção "Home" (a primeira coisa que a gente vê) -->
         <section id="home" class="min-h-[calc(100vh-80px)] flex items-center">
             <div class="text-center md:text-left w-full">
                 <h1 class="text-4xl md:text-6xl font-bold text-indigo-600">Olá, eu sou William Parra </h1>
@@ -69,7 +69,7 @@
             </div>
         </section>
 
-        <!-- Seção Sobre -->
+        <!-- Seção "Sobre Mim" -->
         <section id="sobre" class="py-20">
             <h2 class="text-3xl font-bold text-center mb-12">Sobre Mim</h2>
             <div class="flex flex-col md:flex-row items-center gap-12">
@@ -101,14 +101,14 @@
             </div>
         </section>
 
-        <!-- Seção Projetos -->
+        <!-- Seção "Projetos" -->
         <section id="projetos" class="py-20 bg-white rounded-lg shadow-lg -mx-6 px-6">
             <h2 class="text-3xl font-bold text-center mb-12">Projetos por Área do Conhecimento</h2>
             
-            <!-- Grid de Projetos -->
+            <!-- A "grade" onde ficam os cards dos projetos -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <!-- Card Projeto 1: Linguagens -->
+                <!-- Card 1 - Linguagens -->
                 <a href="linguagens.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/600x400/6366F1/FFF?text=Linguagens" alt="Projeto de Linguagens" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -117,7 +117,7 @@
                     </div>
                 </a>
 
-                <!-- Card Projeto 2: Ciências da Natureza -->
+                <!-- Card 2 - Natureza -->
                 <a href="ciencias_natureza.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/600x400/10B981/FFF?text=C.+Natureza" alt="Projeto de Ciências da Natureza" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -126,7 +126,7 @@
                     </div>
                 </a>
 
-                <!-- Card Projeto 3: Ciências Humanas -->
+                <!-- Card 3 - Humanas -->
                 <a href="ciencias_humanas.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/600x400/F59E0B/FFF?text=C.+Humanas" alt="Projeto de Ciências Humanas" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -135,7 +135,7 @@
                     </div>
                 </a>
 
-                <!-- Card Projeto 4: Matemática -->
+                <!-- Card 4 - Matemática -->
                 <a href="matematica.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/600x400/EF4444/FFF?text=Matemática" alt="Projeto de Matemática" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -144,7 +144,7 @@
                     </div>
                 </a>
 
-                <!-- Card Projeto 5: FTP (T.I.) -->
+                <!-- Card 5 - TI -->
                 <a href="ti.html" class="block bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <img src="https://placehold.co/600x400/3B82F6/FFF?text=T.I." alt="Projeto de T.I." class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -160,7 +160,7 @@
 
     </main>
 
-    <!-- Rodapé -->
+    <!-- Rodapé (lá embaixo da página) -->
     <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; 2025 William Parra Zelent. Todos os direitos reservados.</p>
@@ -168,30 +168,31 @@
         </div>
     </footer>
 
-    <!-- Script para Menu Mobile e Smooth Scroll -->
+    <!-- Parte do JavaScript -->
     <script>
+        // Espera a página carregar inteira pra rodar o script
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
 
-            // Toggle do menu mobile
+            // O que acontece quando clica no botão de menu
             menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('hidden'); // Mostra ou esconde o menu
             });
 
-            // Fecha o menu mobile ao clicar em um link
+            // Pra fechar o menu se clicar num link dele
             mobileMenu.addEventListener('click', (e) => {
                 if (e.target.tagName === 'A') {
                     mobileMenu.classList.add('hidden');
                 }
             });
 
-            // Smooth scroll para links do desktop
+            // Isso aqui é pra rolagem ficar suave quando clica nos links do menu do PC
             document.querySelectorAll('header .hidden a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+                    e.preventDefault(); // Impede o pulo direto
                     document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
+                        behavior: 'smooth' // Faz rolar suave
                     });
                 });
             });
